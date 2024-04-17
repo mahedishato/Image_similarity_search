@@ -1,10 +1,10 @@
-Certainly! Here's a README template for your GitHub repository with detailed documentation:
+Certainly! Below is the updated README template with documentation for the Flask API:
 
 ---
 
-# Signature Similarity Detection using Deep Learning
+# Signature Similarity Detection using Deep Learning and Flask API
 
-This repository contains Python code for detecting similarity between signatures using deep learning techniques. It utilizes the ResNet101 architecture pre-trained on the ImageNet dataset to extract feature vectors from signature images and then computes the cosine similarity between these feature vectors to determine the similarity between signatures.
+This repository contains Python code for detecting similarity between signatures using deep learning techniques, along with a Flask API for easy integration into web applications. It utilizes the ResNet101 architecture pre-trained on the ImageNet dataset to extract feature vectors from signature images and then computes the cosine similarity between these feature vectors to determine the similarity between signatures.
 
 ## Requirements
 
@@ -13,6 +13,7 @@ This repository contains Python code for detecting similarity between signatures
 - opencv-python (cv2)
 - TensorFlow 2.x
 - scipy
+- Flask
 
 You can install the required dependencies via pip:
 
@@ -21,6 +22,8 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+
+### Standalone Script
 
 1. Clone the repository:
 
@@ -39,6 +42,56 @@ git clone https://github.com/mahedishato/Image_similarity_search.git
 ```bash
 python main.py
 ```
+
+### Flask API
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/mahedishato/Image_similarity_search.git
+```
+
+2. Navigate to the repository directory:
+
+```bash
+cd Image_similarity_search
+```
+
+3. Run the Flask API:
+
+```bash
+python app.py
+```
+
+The API will be accessible at `http://localhost:5000/api/findSignatureSimilarity`.
+
+## API Documentation
+
+### `POST /api/findSignatureSimilarity`
+
+**Request Body**
+
+```json
+{
+    "image_path1": "path/to/first/signature/image.jpg",
+    "image_path2": "path/to/second/signature/image.jpg",
+    "threshold": 0.8
+}
+```
+
+- `image_path1` (string): Path to the first signature image.
+- `image_path2` (string): Path to the second signature image.
+- `threshold` (float): Threshold value for similarity detection.
+
+**Response**
+
+```json
+{
+    "result": "Matched"
+}
+```
+
+- `result` (string): Indicates whether the signatures are matched or unmatched.
 
 ## Methodology
 
