@@ -25,8 +25,7 @@ pip install -r requirements.txt
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/signature-similarity-detection.git
-cd signature-similarity-detection
+git clone https://github.com/mahedishato/Image_similarity_search.git
 ```
 
 2. Prepare your signature images. Ensure that they are binary images in JPEG format.
