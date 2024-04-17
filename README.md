@@ -65,5 +65,3 @@ Contributions are welcome! If you have any suggestions, enhancements, or bug fix
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-You can save this content in a file named `README.md` in the root directory of your GitHub repository. Feel free to customize it further based on your preferences and specific details of your project.
